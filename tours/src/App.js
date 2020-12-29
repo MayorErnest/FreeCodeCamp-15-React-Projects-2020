@@ -21,12 +21,17 @@ function App() {
     }
   };
 
+  const removeItem = (id) => {
+    const newTour = tours.filter((tour) => tour.id != id);
+    setTours(newTour);
+  };
+
   useEffect(fetchTours, []);
 
   return (
     <main>
-      <Tours tours={tours} />
-      <Loading />
+      <Tours tours={tours} removeItem={removeItem} />
+      {/* <Loading /> */}
     </main>
   );
 }
