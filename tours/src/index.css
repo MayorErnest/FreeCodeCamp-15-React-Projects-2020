@@ -18,6 +18,10 @@ main {
   text-align: center;
 }
 
+.loading {
+  text-align: center;
+}
+
 .tours-header {
   margin-top: 30px;
   text-transform: uppercase;

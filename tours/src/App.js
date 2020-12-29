@@ -11,6 +11,7 @@ function App() {
 
   const fetchTours = async () => {
     try {
+      setLoading(true);
       const response = await fetch(url);
       const tours = await response.json();
       setLoading(false);
@@ -27,6 +28,10 @@ function App() {
   };
 
   useEffect(fetchTours, []);
+
+  if (loading) {
+    return <Loading />;
+  }
 
   if (tours.length == 0) {
     return (
