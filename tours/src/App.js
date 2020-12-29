@@ -30,9 +30,11 @@ function App() {
 
   if (tours.length == 0) {
     return (
-      <main>
-        <h1>No Tours Left</h1>
-        <button onClick={() => fetchTours()}>Refresh</button>
+      <main className="tour-refresh">
+        <h1 className="tours-header">No Tours Left</h1>
+        <button onClick={() => fetchTours()} className="normalBttn">
+          Refresh
+        </button>
       </main>
     );
   }
