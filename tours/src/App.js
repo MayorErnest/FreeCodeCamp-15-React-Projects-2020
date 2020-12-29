@@ -28,6 +28,15 @@ function App() {
 
   useEffect(fetchTours, []);
 
+  if (tours.length == 0) {
+    return (
+      <main>
+        <h1>No Tours Left</h1>
+        <button onClick={() => fetchTours()}>Refresh</button>
+      </main>
+    );
+  }
+
   return (
     <main>
       <Tours tours={tours} removeItem={removeItem} />
