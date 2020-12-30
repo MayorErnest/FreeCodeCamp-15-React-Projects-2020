@@ -17,7 +17,7 @@ function App() {
       setLoading(false);
       setTours(tours);
     } catch (error) {
-      setLoading(false);
+      setLoading(true);
       console.log(error);
     }
   };
