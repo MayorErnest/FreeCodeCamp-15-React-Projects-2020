@@ -45,7 +45,7 @@ function Review() {
       </div>
       <div className="text-container">
         <h3>{name}</h3>
-        <h3>{job}</h3>
+        <h6>{job}</h6>
         <p>{text}</p>
         <div className="nav-buttons">
           <button className="nav-button" onClick={handleLeft}>
