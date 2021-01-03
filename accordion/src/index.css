@@ -55,3 +55,40 @@ button {
   outline: none;
   color: #ff0000;
 }
+
+@media all and (max-width: 800px) {
+  main {
+    width: 500px;
+    height: 640px;
+  }
+
+  .col-1 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media all and (max-width: 500px) {
+  main {
+    width: 350px;
+  }
+
+  article  {
+    width: 100%;
+  }
+
+  article h1 {
+    font-size: .8rem;
+  }
+
+  article p {
+    font-size: .65rem;
+  }
+}
+
+@media all and (max-width: 365px) {
+  main {
+    width: 305px;
+    height: 560px;
+  }
+}
