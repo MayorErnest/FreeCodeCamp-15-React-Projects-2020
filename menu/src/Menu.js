@@ -9,7 +9,7 @@ function Menu({id,title, price, img, desc}) {
             <div className="item-2">
                 <div>
                     <h4>{title}</h4>
-                    <h4>{price}</h4>
+                    <h4>${price}</h4>
                 </div>
                 <p>{desc}</p>
             </div>
