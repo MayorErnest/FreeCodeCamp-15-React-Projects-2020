@@ -14,6 +14,13 @@ function App() {
   };
 
   useEffect(() => fetchData(), []);
+  if (loading) {
+    return (
+      <main>
+        <h1>Loading...</h1>
+      </main>
+    );
+  }
 
   const { title, dates, duties, company } = data[index];
   return (
