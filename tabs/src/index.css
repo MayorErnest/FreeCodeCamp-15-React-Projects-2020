@@ -74,3 +74,17 @@ button {
   border-left: 2px solid #3cb371;
   color: #3cb371;
 }
+
+@media all and (max-width: 700px) {
+  main {
+    width: 85%;
+  }
+  section {
+    flex-wrap: wrap;
+  }
+
+  article {
+    margin-left: 0px;
+    margin-top: 30px;
+  }
+}
