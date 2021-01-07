@@ -27,15 +27,20 @@ function App() {
     <main className="App">
       <header>
         <h1>Experience</h1>
+        <hr />
       </header>
-      <aside>
-        {data.map((item, index) => (
-          <button key={item.id} onClick={() => setIndex(index)}>
-            {item.company}
-          </button>
-        ))}
-      </aside>
       <section>
+        <aside>
+          {data.map((item, itemIndex) => (
+            <button
+              key={item.id}
+              className={index == itemIndex && "active"}
+              onClick={() => setIndex(itemIndex)}
+            >
+              {item.company}
+            </button>
+          ))}
+        </aside>
         <article>
           <h2>{title}</h2>
           <h4>{company}</h4>
