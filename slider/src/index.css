@@ -58,3 +58,29 @@ button {
 p#quote {
   color: #b22222;
 }
+
+@media all and (max-width: 800px) {
+  section {
+    width: 600px;
+  }
+}
+
+@media all and (max-width: 550px) {
+  section {
+    width: 350px;
+  }
+
+  button {
+    width: 95px;
+  }
+}
+
+@media all and (max-width: 320px) {
+  section {
+    width: 300px;
+  }
+
+  article {
+    margin: 30px;
+  }
+}
