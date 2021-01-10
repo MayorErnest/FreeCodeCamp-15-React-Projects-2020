@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaQuoteRight } from "react-icons/fa";
 
 function Alternative({ value, people }) {
   const { id, image, name, title, quote } = people[value];
@@ -10,6 +11,9 @@ function Alternative({ value, people }) {
       <h3>{name}</h3>
       <h4>{title}</h4>
       <p>{quote}</p>
+      <p id="quote">
+        <FaQuoteRight />
+      </p>
     </article>
   );
 }

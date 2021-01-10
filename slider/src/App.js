@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Alternative from "./Alternative";
+import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 import data from "./data";
 
 function App() {
@@ -31,9 +32,13 @@ function App() {
         </h1>
       </header>
       <section>
-        <button onClick={goBack}>Left</button>
+        <button onClick={goBack}>
+          <AiOutlineArrowLeft />
+        </button>
         <Alternative value={value} people={people} />
-        <button onClick={goFront}>Right</button>
+        <button onClick={goFront}>
+          <AiOutlineArrowRight />
+        </button>
       </section>
     </main>
   );
