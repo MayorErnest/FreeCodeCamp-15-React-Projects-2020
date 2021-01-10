@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Alternative from "./Alternative";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 import data from "./data";
@@ -7,11 +7,16 @@ function App() {
   const [value, setValue] = useState(0);
   const [people, setPeople] = useState(data);
 
+  useEffect(() => {
+    let slider = setInterval(goFront, 3000);
+    return () => clearInterval(slider);
+  }, [value]);
+
   const numberChecker = (value) => {
     if (value < 0) {
-      return 0;
-    } else if (value > 3) {
       return 3;
+    } else if (value > 3) {
+      return 0;
     }
 
     return value;
